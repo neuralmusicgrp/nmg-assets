@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Join Neural Music Group | Build the Future of Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #191833 0, #05050c 55%);
+      color: #f7f3ff;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* LOGO WRAPPER */
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-text-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-text-sub {
+      font-size: 12px;
+      color: #a5a1c7;
+    }
+
+    .hero {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    .hero-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #e7c879;
+      margin-bottom: 8px;
+    }
+    .hero-title {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .hero-highlight {
+      background: linear-gradient(120deg, #24e3ff, #e7c879);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: #b0accf;
+      max-width: 560px;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.15s ease;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #8b6cff, #24e3ff);
+      color: #050308;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+      margin-right: 8px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.8);
+    }
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(8, 7, 24, 0.9);
+      color: #f7f3ff;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(18, 16, 44, 0.95);
+    }
+    .hero-note {
+      font-size: 12px;
+      color: #a5a1c7;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top, #26244b 0, #0d0c1b 55%);
+      border-radius: 18px;
+      padding: 18px 16px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+      font-size: 13px;
+    }
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .card p {
+      color: #b0accf;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 6px;
+      color: #b0accf;
+    }
+    .card ul li::before {
+      content: "▹";
+      margin-right: 6px;
+      color: #24e3ff;
+      font-size: 10px;
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #e7c879;
+      margin-bottom: 4px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 42px;
+      font-size: 12px;
+    }
+    .step {
+      background: rgba(10, 9, 28, 0.9);
+      border-radius: 12px;
+      padding: 10px 10px 12px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      color: #b0accf;
+    }
+    .step strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #f7f3ff;
+    }
+
+    .form-card {
+      background: radial-gradient(circle at top, #26244b 0, #05050c 55%);
+      border-radius: 20px;
+      padding: 18px 16px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(7, 7, 20, 0.9);
+      color: #f7f3ff;
+      font: inherit;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #8f8bb2;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .note {
+      font-size: 11px;
+      color: #a5a1c7;
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 11px;
+      color: #a5a1c7;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 780px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .page {
+        padding-inline: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <!-- 🔥 Insert YOUR GitHub RAW image link here -->
+          <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png
+" alt="NMG Logo">
+        </div>
+        <div>
+          <div class="brand-text-title">Neural Music Group</div>
+          <div class="brand-text-sub">AI-Powered Label • Publishing • OMNIA Empire Division</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-kicker">Partner Invitation</div>
+        <h1 class="hero-title">
+          Join <span class="hero-highlight">Neural Music Group</span>.
+        </h1>
+        <p class="hero-sub">
+          We’re building a label where human soul meets AI engines. Catalogs, campaigns, sync-ready songs, and
+          systems that don’t sleep. This is the music arm of OMNIA Empire.
+        </p>
+        <div>
+          <button type="button" class="btn btn-primary" onclick="scrollToApply()">
+            Apply as NMG Partner
+          </button>
+          <button type="button" class="btn btn-ghost" onclick="scrollToDetails()">
+            View Roles &amp; Expectations
+          </button>
+        </div>
+        <p class="hero-note">
+          If you’re here just to “be around music,” this isn’t for you. If you’re here to build something that feeds you
+          for years, keep reading.
+        </p>
+      </section>
+
+      <section id="details" class="grid">
+        <article class="card">
+          <div class="label">What We’re Building</div>
+          <h2>Future-Facing Label &amp; Publishing House</h2>
+          <p>
+            Neural Music Group integrates AI tools, human songwriters, producers, and marketers into a single engine
+            that can release, promote, and monetize music with speed and intention.
+          </p>
+          <ul>
+            <li>AI + human co-created songs, albums, and thematic catalogs.</li>
+            <li>Campaigns across TikTok, Reels, YouTube, and email funnels. </li>
+            <li>Distribution, monetization, and analytics via tools like CD Baby &amp; Show.co. </li>
+            <li>Systems that make content creation repeatable instead of random.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="label">Who You Might Be</div>
+          <h2>Potential Partner Lanes</h2>
+          <ul>
+            <li>Producer or beatmaker wanting a label home &amp; recurring projects.</li>
+            <li>Marketing / social / content operator who can run campaigns.</li>
+            <li>Songwriter / topliner interested in AI-assisted writing flows.</li>
+            <li>Ops / systems brain who loves building workflows and dashboards.</li>
+          </ul>
+          <p style="margin-top: 10px;">
+            You don’t have to be all of these. But you should be world-class (or hungry enough to get there) in
+            at least one.
+          </p>
+        </article>
+      </section>
+
+      <section class="steps">
+        <div class="step">
+          <strong>Step 1 – Tell Us Your Lane</strong>
+          Pick your primary lane (production, marketing, writing, ops) and how you see yourself plugging into NMG over
+          the next 12–24 months.
+        </div>
+        <div class="step">
+          <strong>Step 2 – Alignment Call</strong>
+          We’ll talk through expectations, time, money, and how partnership works. Straightforward, no fluff.
+        </div>
+        <div class="step">
+          <strong>Step 3 – Pilot Window</strong>
+          If it’s a match, we set a 60–90 day testing period with clear deliverables, and then formalize next-level
+          partnership and equity paths.
+        </div>
+      </section>
+
+      <section id="apply" class="form-card">
+        <div class="label">Apply Now</div>
+        <h2 style="margin-bottom: 6px;">Partner Application – Neural Music Group</h2>
+        <p style="font-size: 13px; color: #b0accf; margin-bottom: 12px;">
+          Be real and specific. This is the first impression of how you think, communicate, and operate.
+        </p>
+
+        <form action="https://formspree.io/f/xyzrevpg" method="POST">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="First + Last" required />
+          </div>
+          <div>
+            <label for="email">Best email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="role">Primary lane in NMG</label>
+            <select id="role" name="role" required>
+              <option value="">Select one</option>
+              <option value="producer">Producer / Beatmaker</option>
+              <option value="writer">Songwriter / Topliner</option>
+              <option value="marketing">Marketing / Social / Content</option>
+              <option value="ops">Operations / Systems</option>
+              <option value="other">Other (explain below)</option>
+            </select>
+          </div>
+          <div>
+            <label for="experience">What have you actually done so far?</label>
+            <textarea id="experience" name="experience" placeholder="Short portfolio snapshot: releases, campaigns, systems, clients, results, etc." required></textarea>
+          </div>
+          <div>
+            <label for="vision">What do you want to help build inside NMG?</label>
+            <textarea id="vision" name="vision" placeholder="Concrete ideas: Christmas catalog, AI artist series, TikTok funnel, sync catalog, etc." required></textarea>
+          </div>
+          <div>
+            <label for="time">Availability &amp; timeline</label>
+            <input id="time" name="time" type="text" placeholder="Example: 10 hrs/week for 3 months, then more once revenue grows." />
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 4px;">Submit NMG Application</button>
+          <p class="note">
+            This form opens a conversation, not a guarantee of role or income. If it’s aligned, we’ll move into a
+            call and written agreement.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Neural Music Group / OMNIA Empire.</span>
+      <span>Built for creators who think like owners.</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    function scrollToApply() {
+      document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
+    }
+    function scrollToDetails() {
+      document.getElementById("details").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
