@@ -102,7 +102,7 @@
       display: block;
       background: radial-gradient(circle at 30% 15%, #e0f2fe 0, transparent 35%),
               radial-gradient(circle at 70% 80%, #020617 0, #020617 60%);
-      transform: scale(1.12); /* makes the logo visually larger inside */
+      transform: scale(1.12);
     }
 
     .brand-text-main {
@@ -321,12 +321,12 @@
       color: #e5e7eb;
     }
 
-    .hero-meta-dot {
-      width: 6px;
-      height: 6px;
+    .hero-meta-radio-icon {
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: #22d3ee;
-      box-shadow: 0 0 12px rgba(45, 212, 191, 0.9);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.9);
     }
 
     /* HERO RIGHT / ORBIT */
@@ -334,7 +334,7 @@
       border-radius: var(--radius-xl);
       background: radial-gradient(circle at top, #111827, #020617 70%);
       border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 18px 18px 20px;
+      padding: 18px;
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
@@ -359,10 +359,10 @@
     }
 
     .hero-orbit-logo {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      letter-spacing: 0.16em;
+      font-family: "Space Grotesk";
       text-transform: uppercase;
       font-size: 0.7rem;
+      letter-spacing: 0.16em;
       color: #e2e8f0;
     }
 
@@ -1026,11 +1026,11 @@
 
           <div class="hero-meta">
             <div class="hero-meta-pill">
-              <span class="hero-meta-dot"></span>
+              <span class="hero-meta-radio-icon"></span>
               <span>Label • Publishing • Sync</span>
             </div>
             <div class="hero-meta-pill">
-              <span class="hero-meta-dot" style="background:#f97316; box-shadow:0 0 10px rgba(248,113,113,0.9);"></span>
+              <span class="hero-meta-radio-icon" style="background:#f97316; box-shadow:0 0 10px rgba(248,113,113,0.9);"></span>
               <span>AI Artists • Virtual Choirs • Holiday Catalog</span>
             </div>
           </div>
@@ -1111,7 +1111,7 @@
             <div class="tag-row">
               <span class="tag">Artist narrative</span>
               <span class="tag">Visual language</span>
-              <span class="tag">Fan journey</span>
+              <span class="tag">Fan journey🟣</span>
             </div>
           </article>
 
@@ -1151,7 +1151,7 @@
         </div>
       </section>
 
-      <!-- SERVICES / LABEL SYSTEM -->
+      <!-- SERVICES -->
       <section id="services" class="section">
         <div class="section-header">
           <div>
@@ -1350,7 +1350,7 @@
         </div>
       </section>
 
-      <!-- BEATS / BEATSTARS HUB -->
+      <!-- BEATS -->
       <section id="beats" class="section">
         <div class="section-header">
           <div>
@@ -1403,7 +1403,7 @@
         </div>
       </section>
 
-      <!-- EMAIL + CONTACT -->
+      <!-- CONTACT -->
       <section id="contact" class="section">
         <div class="section-header">
           <div>
@@ -1428,7 +1428,7 @@
               behind-the-scenes breakdowns</span> of how we’re building this label.
             </p>
 
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('This is a static demo form — connect it to your email service (Mailchimp, ConvertKit, etc.).');">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Connect this to your email provider.');">
               <input
                 type="email"
                 required
@@ -1459,7 +1459,7 @@
               <div>
                 <div class="contact-label">For Artists & Producers</div>
                 <div class="contact-value">
-                  Send streaming links (no large attachments) to your best 1–3 songs or beats:
+                  Send links to your best 1–3 songs or beats:
                   <br />
                   <a href="mailto:neuralmusicgrp@gmail.com">neuralmusicgrp@gmail.com</a>
                 </div>
@@ -1467,8 +1467,7 @@
             </div>
 
             <p class="contact-note">
-              <span>Important:</span> include who you are, what you’re building, and links (Spotify, BeatStars, etc.).
-              We prioritize people who are already moving.
+              <span>Important:</span> include who you are, what you’re building, and your links (Spotify, BeatStars, Suno, etc.).
             </p>
           </div>
         </div>
@@ -1491,15 +1490,15 @@
     </footer>
   </div>
 
-  <!-- FLOATING PARTNER BUTTON -->
+  <!-- FLOATING PARTNER BUTTON — UPDATED TO GITHUB -->
   <a
     class="floating-partner-btn"
-    href="https://sites.google.com/view/neural-music-group/home"
+    href="https://github.com/neuralmusicgrp/nmg-assets"
     target="_blank"
     rel="noopener noreferrer"
   >
     <span>Apply As NMG Partner</span>
-    <span class="floating-partner-btn-pill">External Application</span>
+    <span class="floating-partner-btn-pill">External Link</span>
   </a>
 
   <script>
@@ -1508,7 +1507,6 @@
       nav.classList.toggle('open');
     }
 
-    // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
