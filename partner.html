@@ -64,6 +64,26 @@
       color: #a5a1c7;
     }
 
+    /* HOME BUTTON */
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(8, 7, 24, 0.9);
+      color: #f7f3ff;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.15s ease;
+      white-space: nowrap;
+    }
+    .home-btn:hover {
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(18,16,44,0.95);
+    }
+
     .hero {
       text-align: left;
       margin-bottom: 40px;
@@ -267,18 +287,25 @@
 
 <body>
   <div class="page">
+    <!-- HEADER WITH HOME BUTTON -->
     <header>
       <div class="brand">
         <div class="logo">
-          <!-- 🔥 Insert YOUR GitHub RAW image link here -->
-          <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png
-" alt="NMG Logo">
+          <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" alt="NMG Logo">
         </div>
         <div>
           <div class="brand-text-title">Neural Music Group</div>
           <div class="brand-text-sub">AI-Powered Label • Publishing • OMNIA Empire Division</div>
         </div>
       </div>
+
+      <!-- Home Button -->
+      <a 
+        href="https://neuralmusicgrp.github.io/nmg-assets/index.html"
+        class="home-btn"
+      >
+        ← Back to Home
+      </a>
     </header>
 
     <main>
