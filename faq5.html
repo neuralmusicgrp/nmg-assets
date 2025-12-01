@@ -266,6 +266,37 @@
       font-size: 1rem;
     }
 
+    /* Back to Home Button */
+    .back-home-wrapper {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: radial-gradient(circle at 0 0, rgba(125, 92, 255, 0.2), rgba(5, 5, 20, 0.95));
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.7),
+        0 0 18px rgba(125, 92, 255, 0.5);
+    }
+
+    .back-home-btn span.icon {
+      font-size: 1rem;
+      transform: translateY(1px);
+    }
+
     /* Floating Apply Button */
 
     .floating-cta {
@@ -369,6 +400,7 @@
         </div>
       </div>
       <nav class="site-nav">
+        <a href="https://neuralmusicgrp.github.io/nmg-assets/index.html">Home</a>
         <a href="#nmg-faq">FAQ</a>
         <a href="#about-nmg">About</a>
         <a href="#nmg-faq-general">Artists</a>
@@ -879,6 +911,17 @@
       </article>
 
     </section>
+
+    <!-- Back to Home Button -->
+    <div class="back-home-wrapper">
+      <a
+        href="https://neuralmusicgrp.github.io/nmg-assets/index.html"
+        class="back-home-btn"
+      >
+        <span class="icon">←</span>
+        <span>Back to NMG Home</span>
+      </a>
+    </div>
   </div>
 
   <!-- Floating Apply Button -->
