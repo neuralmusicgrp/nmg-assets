@@ -831,10 +831,11 @@
       text-decoration-thickness: 1px;
     }
 
-    /* FLOATING BUTTONS */
-    .floating-partner-btn,
-    .floating-gpt-btn {
+    /* FLOATING PARTNER BUTTON */
+    .floating-partner-btn {
       position: fixed;
+      right: 20px;
+      bottom: 24px;
       z-index: 50;
       display: inline-flex;
       align-items: center;
@@ -842,6 +843,8 @@
       padding: 11px 18px;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.85);
+      background: radial-gradient(circle at top left, #4f46e5, #7c3aed 45%, #0f172a 100%);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
       font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 0.09em;
@@ -849,28 +852,24 @@
       color: #f9fafb;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
     }
 
-    .floating-partner-btn {
-      right: 20px;
-      bottom: 24px;
-      background: radial-gradient(circle at top left, #4f46e5, #7c3aed 45%, #0f172a 100%);
-    }
-
-    .floating-gpt-btn {
-      left: 20px;
-      bottom: 24px;
-      background: radial-gradient(circle at top left, #0f766e, #22c55e 45%, #022c22 100%);
-    }
-
-    .floating-partner-btn-pill,
-    .floating-gpt-btn-pill {
+    .floating-partner-btn-pill {
       padding: 3px 8px;
       border-radius: 999px;
       font-size: 0.65rem;
       background: rgba(34, 211, 238, 0.2);
       color: #a5f3fc;
+    }
+
+    @media (max-width: 640px) {
+      .floating-partner-btn {
+        right: 16px;
+        left: 16px;
+        bottom: 18px;
+        justify-content: center;
+        font-size: 0.78rem;
+      }
     }
 
     /* RESPONSIVE */
@@ -956,25 +955,6 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
-      /* Mobile positioning for floating buttons: opposite sides, no overlap */
-      .floating-partner-btn,
-      .floating-gpt-btn {
-        font-size: 0.78rem;
-        padding: 10px 12px;
-      }
-
-      .floating-gpt-btn {
-        left: 16px;
-        right: auto;
-        bottom: 24px;
-      }
-
-      .floating-partner-btn {
-        right: 16px;
-        left: auto;
-        bottom: 24px;
-      }
     }
   </style>
 </head>
@@ -982,7 +962,7 @@
   <div class="page">
     <!-- HEADER -->
     <header>
-      <!-- Brand clickable home -->
+      <!-- Brand now clickable: goes "home" to index.html -->
       <a href="index.html" class="brand">
         <div class="brand-mark">
           <img
@@ -1002,8 +982,8 @@
           <a href="#vision">Vision</a>
           <a href="#services">Label</a>
           <a href="#ai-lab">AI Lab</a>
-          <!-- NMG GPT in nav (opens in new tab) -->
-          <a href="https://chatgpt.com/g/your-nmg-gpt-id" target="_blank" rel="noopener noreferrer">NMG GPT</a>
+          <!-- NMG GPT in main nav (opens in new tab) -->
+          <a href="https://chatgpt.com/g/g-692d52f75ad0819195865ac77d468dd8-n-m-g" target="_blank" rel="noopener noreferrer">NMG GPT</a>
           <a href="#roster">Artists</a>
           <a href="#beats">Beats</a>
           <a href="faq.html">FAQ</a>
@@ -1184,7 +1164,7 @@
             </div>
             <h2 class="section-title" style="margin-top: 8px;">Label • Publishing • Sync</h2>
           </div>
-        <p class="section-kicker">
+          <p class="section-kicker">
             NMG is a <span>modular stack</span>:
             start with a single song or plug an entire catalog into our ecosystem.
           </p>
@@ -1538,12 +1518,10 @@
         <a href="#ai-lab">AI Lab</a>
         <a href="#contact">Contact</a>
         <a href="faq.html">FAQ</a>
-        <a href="https://chatgpt.com/g/your-nmg-gpt-id" target="_blank" rel="noopener noreferrer">NMG GPT</a>
+        <a href="https://chatgpt.com/g/g-692d52f75ad0819195865ac77d468dd8-n-m-g" target="_blank" rel="noopener noreferrer">NMG GPT</a>
       </div>
     </footer>
   </div>
-
-  
 
   <!-- FLOATING PARTNER BUTTON -->
   <a
@@ -1564,5 +1542,3 @@
   </script>
 </body>
 </html>
-
-
