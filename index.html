@@ -962,7 +962,7 @@
   <div class="page">
     <!-- HEADER -->
     <header>
-      <!-- 🔥 Brand now clickable: goes "home" to index.html -->
+      <!-- Brand clickable: goes "home" to index.html -->
       <a href="index.html" class="brand">
         <div class="brand-mark">
           <img
@@ -998,10 +998,483 @@
       </nav>
     </header>
 
-    <!-- (rest of the page stays exactly the same as you had it) -->
+    <!-- MAIN -->
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>Next-Gen Record Label & Creative Lab</span>
+          </div>
+          <h1 class="hero-title">
+            Where <span>human soul</span> meets <span>neural sound.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Neural Music Group (NMG) is an AI-powered record label & publishing house
+            for artists, producers, and storytellers who know the future of music is
+            <span class="hero-subtitle-strong">human × machine collaboration</span>.
+          </p>
 
-    <!-- HERO -->
-    <!-- ... keep all your existing sections here unchanged ... -->
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+              Explore NMG System
+            </button>
+            <button class="btn-ghost" onclick="document.getElementById('beats').scrollIntoView({behavior: 'smooth'})">
+              <span class="btn-ghost-dot"></span>
+              Browse Beats & Reference Tracks
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-pill">
+              <span class="hero-meta-radio-icon"></span>
+              <span>Label • Publishing • Sync</span>
+            </div>
+            <div class="hero-meta-pill">
+              <span class="hero-meta-radio-icon" style="background:#f97316; box-shadow:0 0 10px rgba(248,113,113,0.9);"></span>
+              <span>AI Artists • Virtual Choirs • Holiday Catalog</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-orbit" aria-label="Neural Music Group ecosystem visual">
+          <div class="hero-orbit-header">
+            <div class="hero-orbit-tag">NMG Neural Stack</div>
+            <div class="hero-orbit-logo">OMNIA • NMG</div>
+          </div>
+
+          <div class="orbit-visual">
+            <div class="orbit-core">
+              <div class="orbit-pulse"></div>
+              <div class="orbit-core-chip">
+                <div class="orbit-core-chip-dot"></div>
+                <div>
+                  <div class="orbit-core-chip-label">Core Engine</div>
+                  <div>AI + Human Production Pipeline</div>
+                </div>
+              </div>
+
+              <div class="orbit-badge orbit-badge-top-left">
+                <span class="orbit-badge-pill">Label</span>
+                <span>Singles • Albums • Catalog</span>
+              </div>
+
+              <div class="orbit-badge orbit-badge-bottom-right">
+                <span class="orbit-badge-pill" style="background:rgba(34,211,238,0.2); color:#a5f3fc;">
+                  Publishing
+                </span>
+                <span>Sync • Licensing • PRO-ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-orbit-footer">
+            <span>
+              <span class="hero-orbit-footer-dot"></span>
+              Built for BeatStars, Suno, & streaming era
+            </span>
+            <span>
+              <span class="hero-orbit-footer-dot" style="background:#22d3ee;"></span>
+              Sony/BeatStars partner-ready infrastructure
+            </span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- VISION -->
+      <section id="vision" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>Vision</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">The Label as a Living System</h2>
+          </div>
+          <p class="section-kicker">
+            We design NMG like a <span>neural network for music</span>:
+            songs, stories, and humans all connected — feeding back data,
+            audience response, and intent into every release.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Story-First Branding</h3>
+              <div class="card-badge">Identity</div>
+            </div>
+            <p class="card-body">
+              Every project starts with story: who you are, what you stand for,
+              and the world your music lives in. Focused, authentic, and
+              unmistakably you — not a copy of someone else’s algorithm.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Artist narrative</span>
+              <span class="tag">Visual language</span>
+              <span class="tag">Fan journey🟣</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Built-In Marketing Spine</h3>
+              <div class="card-badge">Growth</div>
+            </div>
+            <p class="card-body">
+              From TikTok clips to email sequences, every release ships with
+              a campaign map — so you’re not just dropping songs, you’re
+              guiding fans through a journey that actually converts.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Short-form video</span>
+              <span class="tag">Sequential content</span>
+              <span class="tag">Playlist strategy</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Own Your Audience</h3>
+              <div class="card-badge">Email + Data</div>
+            </div>
+            <p class="card-body">
+              Social is rented land. We build email + SMS funnels so you own
+              your relationship with fans, not the algorithm — and turn that
+              list into real revenue and long-term supporters.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Email funnels</span>
+              <span class="tag">Direct-to-fan offers</span>
+              <span class="tag">Data-informed moves</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERVICES / NMG SYSTEM -->
+      <section id="services" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>NMG System</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">Label • Publishing • Sync</h2>
+          </div>
+          <p class="section-kicker">
+            NMG is a <span>modular stack</span>:
+            start with a single song or plug an entire catalog into our ecosystem.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Record Label</h3>
+              <div class="card-badge">Releases</div>
+            </div>
+            <p class="card-body">
+              From AI-assisted demos to final masters, we guide projects through
+              writing, production, mixing, artwork, and distribution. Designed for
+              Spotify, Apple, YouTube, and holiday-heavy seasons.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Singles & EPs</span>
+              <span class="tag">Concept albums</span>
+              <span class="tag">Holiday catalogs</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Publishing</h3>
+              <div class="card-badge">Rights</div>
+            </div>
+            <p class="card-body">
+              We help you track splits, PRO registrations, and catalog metadata
+              from day one so your songs are ready for sync, cover licenses, and
+              global publishing administration.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Split sheets</span>
+              <span class="tag">PRO-ready</span>
+              <span class="tag">Sync positioning</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Sync & Licensing</h3>
+              <div class="card-badge">Placement</div>
+            </div>
+            <p class="card-body">
+              We design songs with placement in mind: clear themes, clean
+              mixes, and alt versions (instrumental, TV mix, stems) ready for
+              film, games, and brand partnerships.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Alt mixes</span>
+              <span class="tag">Instrumentals</span>
+              <span class="tag">Cue-ready hooks</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- AI LAB -->
+      <section id="ai-lab" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>AI Creative Lab</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">Human Spirit × Neural Tools</h2>
+          </div>
+          <p class="section-kicker">
+            We treat AI as an <span>instrument</span>, not a replacement:
+            a choir of models serving the song — and the soul behind it.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">AI Artist Systems</h3>
+              <div class="card-badge">Personas</div>
+            </div>
+            <p class="card-body">
+              We build fully-articulated AI artist profiles — name, lore, vocal
+              style, visual identity, and prompt systems for Suno / other engines.
+              Perfect for concept projects, alter-egos, and virtual groups.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Vocal style prompts</span>
+              <span class="tag">Lore & mythology</span>
+              <span class="tag">Visual lookbooks</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">Rapid Prototyping</h3>
+              <div class="card-badge">Workflow</div>
+            </div>
+            <p class="card-body">
+              Turn an idea into a testable song in hours, not months: neural
+              demo generation, quick A/B hooks, and TikTok-first snippets to
+              validate what actually moves people.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Hook testing</span>
+              <span class="tag">Clip-first writing</span>
+              <span class="tag">Audience feedback loops</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ROSTER -->
+      <section id="roster" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>Roster</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">Sample NMG Universe</h2>
+          </div>
+          <p class="section-kicker">
+            A growing constellation of <span>human & AI-assisted acts</span>
+            built for soulful storytelling, holidays, and cinematic moments.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card artist-card">
+            <div class="artist-chip">
+              <span class="artist-chip-dot"></span>
+              <span>Love & Soul</span>
+            </div>
+            <div>
+              <div class="artist-name">Home for the Holidays</div>
+              <div class="artist-meta">
+                R&B / soul holiday universe featuring Lumi Rae, The Fourth Harmonic,
+                and a rotating cast of AI-assisted vocalists.
+              </div>
+            </div>
+            <div class="artist-tags">
+              <span class="tag">Neo-soul Christmas</span>
+              <span class="tag">Romantic & family cuts</span>
+              <span class="tag">Annual catalog play</span>
+            </div>
+          </article>
+
+          <article class="card artist-card">
+            <div class="artist-chip">
+              <span class="artist-chip-dot" style="background:#22c55e;"></span>
+              <span>AcedawgBeatz</span>
+            </div>
+            <div>
+              <div class="artist-name">Producer • Beat Architect</div>
+              <div class="artist-meta">
+                Trap, R&B, and cinematic beats designed for BeatStars, AI writers,
+                and sync — from club bangers to storytelling instrumentals.
+              </div>
+            </div>
+            <div class="artist-tags">
+              <span class="tag">BeatStars partner</span>
+              <span class="tag">Sync-friendly</span>
+              <span class="tag">Open verses</span>
+            </div>
+          </article>
+
+          <article class="card artist-card">
+            <div class="artist-chip">
+              <span class="artist-chip-dot" style="background:#38bdf8;"></span>
+              <span>Neural Choirs</span>
+            </div>
+            <div>
+              <div class="artist-name">The Inner Light Choir</div>
+              <div class="artist-meta">
+                Layered AI/human choirs for gospel, cinematic trailers, and
+                unity-consciousness anthems.
+              </div>
+            </div>
+            <div class="artist-tags">
+              <span class="tag">Gospel & anthemic</span>
+              <span class="tag">Law of One themes</span>
+              <span class="tag">Trailer builds</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BEATS -->
+      <section id="beats" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>Beats & Reference Tracks</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">Powered by BeatStars & AI</h2>
+          </div>
+        <p class="section-kicker">
+          Use NMG as your <span>central hub</span>:
+          BeatStars for leasing, NMG for releases, AI for rapid iteration.
+        </p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">For Artists</h3>
+              <div class="card-badge">Creators</div>
+            </div>
+            <p class="card-body">
+              Tap into our BeatStars catalogs for hooks, open verses, and reference
+              tracks. Start with leased beats, then graduate into full NMG label
+              projects when the records prove themselves.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Lease → Partner pathway</span>
+              <span class="tag">Topline-ready beats</span>
+              <span class="tag">Holiday & evergreen packs</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">For Producers</h3>
+              <div class="card-badge">Builders</div>
+            </div>
+            <p class="card-body">
+              Plug your catalog into NMG’s ecosystem. We help with titling, cover
+              art prompts, metadata, and marketing flows so your beats are more
+              searchable, syncable, and story-driven.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Title systems</span>
+              <span class="tag">Cover art prompts</span>
+              <span class="tag">Marketing checklists</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <div>
+            <div class="pill-label">
+              <span class="pill-label-dot"></span>
+              <span>Connect</span>
+            </div>
+            <h2 class="section-title" style="margin-top: 8px;">Join the NMG Neural Circle</h2>
+          </div>
+          <p class="section-kicker">
+            One focused email list can <span>outperform all your socials</span>
+            when you treat it like a real relationship, not an afterthought.
+          </p>
+        </div>
+
+        <div class="newsletter">
+          <div class="newsletter-card">
+            <h3 class="newsletter-title">Get the NMG Release & Opportunity Brief</h3>
+            <p class="newsletter-copy">
+              1–2 emails a month with:
+              <span>open collaboration calls, AI tools we actually use, beat & sync briefs, and
+              behind-the-scenes breakdowns</span> of how we’re building this label.
+            </p>
+
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Connect this to your email provider.');">
+              <input
+                type="email"
+                required
+                class="newsletter-input"
+                placeholder="you@example.com"
+                aria-label="Email address"
+              />
+              <button class="newsletter-btn" type="submit">
+                Join Neural Circle
+              </button>
+            </form>
+
+            <p class="newsletter-meta">
+              No spam. Just experiments, opportunities, and real talk about the new music economy.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-grid">
+              <div>
+                <div class="contact-label">General Contact</div>
+                <div class="contact-value">
+                  Email us at:
+                  <br />
+                  <a href="mailto:neuralmusicgrp@gmail.com">neuralmusicgrp@gmail.com</a>
+                </div>
+              </div>
+              <div>
+                <div class="contact-label">For Artists & Producers</div>
+                <div class="contact-value">
+                  Send links to your best 1–3 songs or beats:
+                  <br />
+                  <a href="mailto:neuralmusicgrp@gmail.com">neuralmusicgrp@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <p class="contact-note">
+              <span>Important:</span> include who you are, what you’re building, and your links (Spotify, BeatStars, Suno, etc.).
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
