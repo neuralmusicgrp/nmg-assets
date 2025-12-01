@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Neural Music Group | FAQ & Partner Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Neural Music Group (NMG) is an AI-powered record label and publishing ecosystem for modern artists, producers, and partners." />
+  <style>
+    :root {
+      --bg-main: #05050c;
+      --bg-card: #101020;
+      --bg-card-soft: #15152a;
+      --accent: #7d5cff;
+      --accent-soft: #a48bff;
+      --accent-strong: #ff4ff0;
+      --text-main: #f7f3ff;
+      --text-soft: #b6b2d9;
+      --border-subtle: #262640;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, #18163a 0, #05050c 55%) fixed,
+        #05050c;
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 28px 18px 72px;
+    }
+
+    header.site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 0%, #ffffff 0, #cac4ff 26%, #222046 62%, #050410 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    nav.site-nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    nav.site-nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: all 0.18s ease-out;
+    }
+
+    nav.site-nav a:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .hero {
+      margin-bottom: 32px;
+      padding: 22px 18px 24px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 79, 240, 0.09), transparent 52%),
+        radial-gradient(circle at 100% 0, rgba(125, 92, 255, 0.12), transparent 56%),
+        linear-gradient(135deg, #0b0b18, #070712);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(125, 92, 255, 0.28);
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 1.9rem;
+      line-height: 1.2;
+      margin: 0 0 8px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, var(--accent-soft), var(--accent-strong));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-body {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .hero-tag {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-soft);
+      background: rgba(5, 5, 20, 0.9);
+    }
+
+    .hero-footer {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    /* FAQ & Accordion */
+
+    .faq {
+      margin-top: 12px;
+    }
+
+    .faq h2 {
+      font-size: 1.4rem;
+      margin: 28px 0 12px;
+    }
+
+    .faq-header p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      max-width: 760px;
+    }
+
+    .faq-item {
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(255, 79, 240, 0.04), transparent 55%),
+                  linear-gradient(145deg, rgba(21, 21, 42, 0.98), rgba(8, 8, 18, 0.98));
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      margin: 0;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 0.96rem;
+    }
+
+    .faq-question span {
+      font-weight: 500;
+    }
+
+    .faq-toggle {
+      font-size: 1.2rem;
+      color: var(--accent-soft);
+      transition: transform 0.18s ease-out;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(90deg);
+    }
+
+    .faq-body {
+      padding: 0 14px 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: none;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .faq-item.open .faq-body {
+      display: block;
+    }
+
+    .faq-body p {
+      margin: 8px 0;
+    }
+
+    .faq-body ul,
+    .faq-body ol {
+      padding-left: 18px;
+      margin: 6px 0 10px;
+    }
+
+    .faq-body li {
+      margin-bottom: 3px;
+    }
+
+    /* Search Bar */
+    #faqSearch {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 22px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      background: #0d0d1a;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+
+    /* Floating Apply Button */
+
+    .floating-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+    }
+
+    .floating-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 0 0, #ffb2ff 0, #ff4ff0 26%, #7d5cff 70%, #201854 100%);
+      color: #05050c;
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.7),
+        0 0 24px rgba(255, 79, 240, 0.7);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .floating-cta a span.icon {
+      font-size: 1rem;
+      transform: translateY(1px);
+    }
+
+    /* Floating NMG GPT Widget */
+    #nmg-gpt-widget {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 999;
+    }
+
+    .nmg-gpt-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #7d5cff, #ff4ff0);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      box-shadow:
+        0 14px 28px rgba(0,0,0,0.6),
+        0 0 20px rgba(255,79,240,0.6);
+    }
+
+    @media (max-width: 720px) {
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav.site-nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .hero {
+        padding: 18px 14px 20px;
+      }
+      .hero-title {
+        font-size: 1.6rem;
+      }
+      .page {
+        padding: 20px 14px 72px;
+      }
+      .floating-cta {
+        right: 12px;
+        bottom: 12px;
+      }
+      #nmg-gpt-widget {
+        left: 12px;
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header with GitHub logo -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" alt="Neural Music Group Logo">
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">Neural Music Group</div>
+          <div class="brand-subtitle">AI-Powered Label &amp; Publishing Ecosystem</div>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="#nmg-faq">FAQ</a>
+        <a href="#about-nmg">About</a>
+        <a href="#nmg-faq-general">Artists</a>
+        <a href="#nmg-faq-partners">Partners</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="about-nmg">
+      <div class="hero-kicker">AI-Powered Label &amp; Publishing</div>
+      <h1 class="hero-title">
+        Build your <span class="hero-highlight">catalog, brand, and empire</span> with NMG.
+      </h1>
+      <p class="hero-body">
+        Neural Music Group blends AI, modern marketing, fair publishing, and holistic artist support into one system. 
+        We’re not here to own you. We’re here to build <em>with</em> you.
+      </p>
+      <div class="hero-tags">
+        <div class="hero-tag">Artist-First Ownership</div>
+        <div class="hero-tag">AI + Human Creativity</div>
+        <div class="hero-tag">BeatStars &amp; Suno Integration</div>
+        <div class="hero-tag">OMNIA Partner Path</div>
+      </div>
+      <div class="hero-footer">
+        Scroll down for the full NMG background, FAQ, and partner information.
+      </div>
+    </section>
+
+    <!-- Search Bar -->
+    <input id="faqSearch" type="text" placeholder="Search the FAQ..." />
+
+    <!-- FAQ SECTION -->
+    <section id="nmg-faq" class="faq">
+      <header class="faq-header">
+        <h2>About Neural Music Group (NMG)</h2>
+        <p>
+          NMG is an AI-powered record label, publishing company, and creative ecosystem designed for the next generation of artists. 
+          We merge human creativity, artificial intelligence, holistic wellness principles, modern marketing systems, and ethical business structure to help artists build sustainable, ownership-driven careers.
+        </p>
+      </header>
+
+      <!-- Background / Origin FAQ items as accordion -->
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Our Origin Story</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            NMG was founded by Anthony Boyd, drawing from over three decades of experience in music production, songwriting, audio engineering, publishing, design and branding, holistic health and wellness, creative systems development, and AI innovation.
+          </p>
+          <p>
+            After years of seeing independent artists struggle with chaos, predatory contracts, and outdated industry models, it became clear that artists didn’t need another traditional label—they needed an ecosystem. 
+            NMG was built as that solution: not a label you sign your life away to, but a label you <strong>build with</strong>.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Our Mission</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>The mission of NMG is to empower modern artists with:</p>
+          <ul>
+            <li>Ownership and creative sovereignty</li>
+            <li>AI-enhanced creation and production support</li>
+            <li>Transparent, fair publishing structures</li>
+            <li>Holistic support for mental, emotional, and creative wellness</li>
+            <li>Modern marketing and release systems</li>
+            <li>Long-term partnership and leadership pathways</li>
+          </ul>
+          <p>
+            We help artists not just release songs, but build catalogs, brands, incomes, and legacies.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>Our Vision</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            NMG’s vision is to become the world’s most ethical, AI-powered, creator-focused label—where artists grow in their music, their identity, and their leadership.
+          </p>
+          <p>NMG functions as:</p>
+          <ul>
+            <li>A record label</li>
+            <li>A publishing house</li>
+            <li>An AI creative studio</li>
+            <li>A holistic wellness-informed support system</li>
+            <li>A partner ecosystem</li>
+            <li>A pipeline into OMNIA Empire leadership</li>
+          </ul>
+          <p>
+            This is the <strong>Artist Sovereignty Era</strong>, and NMG is the engine.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>The NMG Ecosystem</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>NMG is built on four core pillars:</p>
+          <ul>
+            <li>
+              <strong>1. Label &amp; Publishing Division</strong><br>
+              Artist-first distribution, catalog development, metadata, splits, and rights clarity.
+            </li>
+            <li>
+              <strong>2. AI-Powered Creative Studio</strong><br>
+              Tools and workflows using Suno, GPT, and other AI technologies to accelerate songwriting, production, and ideation.
+            </li>
+            <li>
+              <strong>3. The NMG Marketing Engine</strong><br>
+              Modern promotion systems including TikTok strategies, release cycles, email funnels, content frameworks, and BeatStars integration.
+            </li>
+            <li>
+              <strong>4. Holistic Artist Support &amp; Partner Path</strong><br>
+              Mental, emotional, creative, and operational wellness support, plus ascension from partner to leadership roles within OMNIA.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- MAIN FAQ ITEMS -->
+      <h2 id="nmg-faq-general">General NMG Questions</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>1. What is Neural Music Group (NMG)?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            NMG is an AI-enhanced record label and publishing ecosystem built for modern creators who want structure, ownership, fairness, and acceleration. 
+            We combine technology, holistic support, and real-world music strategy to help artists grow their catalogs, their brands, and their income.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>2. Are you a traditional record label?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            No. We are not a predatory, old-school label. We don’t rely on “sign your life away” contracts, hidden clauses, or ownership traps.
+          </p>
+          <p>
+            Instead, NMG is a hybrid of label, publisher, AI creative studio, and strategic partner. Artists keep control, and any shared revenue is clearly agreed upon.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>3. Who is NMG for?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>NMG is for:</p>
+          <ul>
+            <li>Independent artists, singers, and rappers</li>
+            <li>Producers (including BeatStars producers)</li>
+            <li>Songwriters and composers</li>
+            <li>AI-assisted creators using tools like Suno</li>
+            <li>Artist-entrepreneurs looking for systems and structure</li>
+            <li>Partners who want to eventually join the wider OMNIA ecosystem</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>4. Do I keep ownership of my music?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. By default, you keep ownership of your music.</p>
+          <ul>
+            <li>You own your masters (unless a specific written agreement states otherwise).</li>
+            <li>You retain your publishing share (unless you choose admin or specific publishing support).</li>
+            <li>You control your brand, image, and creative identity.</li>
+          </ul>
+          <p>NMG partners with you—we do not take your rights by default.</p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>5. Does NMG take royalties?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            NMG only participates in royalties or revenue when there is a clear, written, mutually agreed arrangement. 
+            This might occur in a specific partnership tier, a joint venture, a marketing collaboration, or a publishing/admin deal.
+          </p>
+          <p>
+            If there is no written agreement, NMG is not taking royalties from your music.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>6. How do I apply to work with NMG?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            Use the <strong>“Apply As NMG Partner”</strong> button on the site. It links to the NMG application page where you can share your music, goals, and current situation.
+          </p>
+          <p>We review based on:</p>
+          <ul>
+            <li>Alignment with NMG and OMNIA values</li>
+            <li>Seriousness about building a career, not just chasing a moment</li>
+            <li>Willingness to collaborate, learn, and execute</li>
+            <li>Existing work ethic and consistency</li>
+          </ul>
+          <p>If it’s a good fit, you’ll be invited into the appropriate tier.</p>
+        </div>
+      </article>
+
+      <h2>AI, Suno &amp; Creative Workflow</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>7. Do I have to use AI tools to work with NMG?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            No. NMG supports fully human artists, AI-assisted artists, and hybrid creators. AI is optional but powerful. 
+            If you prefer to create everything by hand, we still support you with strategy, structure, and systems.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>8. What is Suno and how does NMG use it?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            Suno is an AI music-generation platform that creates full songs from text prompts. Within NMG, Suno is used to:
+          </p>
+          <ul>
+            <li>Prototype song ideas and concepts quickly</li>
+            <li>Create reference tracks for vocalists and producers</li>
+            <li>Explore AI artist personas and alternate versions</li>
+            <li>Sketch albums, EP flows, and soundtracks</li>
+            <li>Support faster songwriting and creative experimentation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>9. Can I release Suno songs commercially with NMG?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            Yes, as long as you follow Suno’s licensing and usage rules and the material is original. 
+            NMG can help you determine which Suno-generated songs are suitable for release, refine lyrics and structure, and position them within your brand and catalog strategy.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>10. Will NMG help me write and refine Suno prompts?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. NMG GPT is built to:</p>
+          <ul>
+            <li>Write optimized prompts for genre, mood, BPM, and era</li>
+            <li>Tailor prompts to your voice, style, or artist persona</li>
+            <li>Generate multiple prompt variations for each idea</li>
+            <li>Help you structure prompts for hooks, verses, and bridges</li>
+            <li>Turn bigger concepts (albums, themes) into prompt sets</li>
+          </ul>
+        </div>
+      </article>
+
+      <h2>BeatStars &amp; Production</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>11. What is BeatStars and how does NMG use it?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            BeatStars is an online marketplace for beats, instrumentals, hooks, and licensing. Inside NMG, BeatStars is used for:
+          </p>
+          <ul>
+            <li>Producers selling and licensing their beats</li>
+            <li>Artists finding instrumentals for new songs</li>
+            <li>Hosting reference tracks and open verses</li>
+            <li>Running collaboration and challenge campaigns</li>
+            <li>Creating funnels from BeatStars listeners to streaming platforms and email lists</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>12. I already have a BeatStars page. Can NMG still help?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. In fact, that’s ideal. NMG can help you:</p>
+          <ul>
+            <li>Optimize titles, descriptions, and SEO tags</li>
+            <li>Set smart pricing and licensing tiers</li>
+            <li>Create themed packs and beat bundles</li>
+            <li>Connect BeatStars traffic to your Spotify, TikTok, and email list</li>
+            <li>Build campaigns around “Beat of the Week” or open verse challenges</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>13. Can NMG help me monetize open verses and collaborations?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. NMG helps you:</p>
+          <ul>
+            <li>Define rules and expectations for open verse challenges</li>
+            <li>Host and promote them via BeatStars and TikTok</li>
+            <li>Select winning verses and collaborators</li>
+            <li>Structure fair splits and publishing for official releases</li>
+            <li>Turn challenges into long-term content and fan engagement</li>
+          </ul>
+        </div>
+      </article>
+
+      <h2>Distribution &amp; Marketing</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>14. Where will my music be distributed?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>NMG aims for global digital distribution, including (but not limited to):</p>
+          <ul>
+            <li>Spotify</li>
+            <li>Apple Music</li>
+            <li>Amazon Music</li>
+            <li>YouTube and YouTube Music</li>
+            <li>TikTok and Instagram (via sound libraries)</li>
+            <li>Other major DSPs and platforms</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>15. Does NMG handle TikTok and short-form video strategy?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            Yes. TikTok and short-form content are core parts of NMG’s marketing engine. We help you:
+          </p>
+          <ul>
+            <li>Identify hook moments in your songs</li>
+            <li>Design weekly and monthly content calendars</li>
+            <li>Use duets, stitches, and open verses strategically</li>
+            <li>Build narratives around your music, not just “out now” posts</li>
+            <li>Reuse high-performing clips and iterate over time</li>
+          </ul>
+          <p>NMG GPT can generate specific content ideas and scripts for each song or campaign.</p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>16. Do you help with email marketing and fanbase building?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Yes. Email and SMS are treated as core assets—not afterthoughts. NMG helps:</p>
+          <ul>
+            <li>Set up your email platform and list</li>
+            <li>Create a Welcome Series for new subscribers</li>
+            <li>Write nurture emails that tell your story</li>
+            <li>Plan launch sequences around singles, EPs, and albums</li>
+            <li>Integrate social media, BeatStars, and Suno releases into ongoing communication</li>
+          </ul>
+          <p>
+            Well-structured email systems are one of the most reliable ways to convert fans into buyers and long-term supporters.
+          </p>
+        </div>
+      </article>
+
+      <h2>Publishing, Rights &amp; Legal</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>17. How does NMG handle publishing and splits?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>NMG uses fair, transparent publishing structures. We encourage:</p>
+          <ul>
+            <li>Clear split sheets for every song</li>
+            <li>Agreed percentages for all songwriters and publishers</li>
+            <li>Written agreements before release</li>
+            <li>Educating artists on basic publishing and royalty concepts</li>
+          </ul>
+          <p>We are not here to confuse you—we are here to help you understand how your money and rights work.</p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>18. Does NMG provide legal advice?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>No. NMG is not a law firm and does not provide legal advice. We can:</p>
+          <ul>
+            <li>Explain industry concepts in plain language</li>
+            <li>Suggest when split sheets and written agreements are important</li>
+            <li>Help you prepare better questions for a qualified attorney</li>
+          </ul>
+          <p>For contracts, disputes, or legal risk, you should always consult a licensed attorney.</p>
+        </div>
+      </article>
+
+      <h2 id="nmg-faq-partners">Partner Path &amp; OMNIA</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>19. What is the NMG Partner Program?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            The NMG Partner Program is a structured pathway for individuals who want to help build NMG and potentially move into leadership within the broader OMNIA ecosystem.
+          </p>
+          <p>Over time, partners can evolve through roles such as:</p>
+          <ul>
+            <li>Collaborator / Contributor</li>
+            <li>NMG Partner</li>
+            <li>Equity-Eligible Partner</li>
+            <li>Division Lead</li>
+            <li>Potential OMNIA leadership track (based on performance and alignment)</li>
+          </ul>
+          <p>
+            Advancement is based on integrity, performance, consistency, creativity, and the value you bring to the ecosystem—not on paying for status.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>20. What is OMNIA and how is NMG connected?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>
+            OMNIA is the parent ecosystem—a multi-division organization integrating music, publishing, holistic wellness, media, education, creative systems, and technology.
+          </p>
+          <p>
+            NMG is the music branch of OMNIA. High-performing NMG partners may be considered for roles or collaborations across other OMNIA divisions over time.
+          </p>
+        </div>
+      </article>
+
+      <h2>Getting Started</h2>
+
+      <article class="faq-item">
+        <button class="faq-question" type="button">
+          <span>21. How do I get started with NMG?</span>
+          <span class="faq-toggle">&rsaquo;</span>
+        </button>
+        <div class="faq-body">
+          <p>Getting started is simple:</p>
+          <ol>
+            <li>Click the <strong>“Apply As NMG Partner”</strong> button on the site.</li>
+            <li>Complete the application with your music, links, and goals.</li>
+            <li>If accepted, you’ll be placed at the appropriate entry tier.</li>
+            <li>You’ll receive a welcome email with next steps and orientation.</li>
+            <li>Use <strong>NMG GPT</strong> for instant answers about the label, policies, opportunities, and next steps.</li>
+          </ol>
+          <p>
+            NMG GPT is a <strong>public rapid-answer assistant</strong> that helps you understand how NMG works, what we offer, and how to move forward. 
+            It is not the partner-only building system — that comes later if you advance within the program.
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+  <!-- Floating Apply Button -->
+  <div class="floating-cta">
+    <a href="https://sites.google.com/view/neural-music-group/home" target="_blank" rel="noopener noreferrer">
+      <span class="icon">✦</span>
+      <span>Apply As NMG Partner</span>
+    </a>
+  </div>
+
+  <!-- Floating NMG GPT Widget -->
+  <div id="nmg-gpt-widget">
+    <a href="https://chatgpt.com/g/g-692d52f75ad0819195865ac77d468dd8-n-m-g" target="_blank" class="nmg-gpt-button">
+      💬 Chat with NMG GPT
+    </a>
+  </div>
+
+  <script>
+    // Simple accordion logic
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.closest('.faq-item');
+        var open = item.classList.contains('open');
+        // Optionally close others
+        document.querySelectorAll('.faq-item.open').forEach(function (other) {
+          if (other !== item) other.classList.remove('open');
+        });
+        if (!open) {
+          item.classList.add('open');
+        } else {
+          item.classList.remove('open');
+        }
+      });
+    });
+
+    // Live FAQ Search
+    document.getElementById("faqSearch").addEventListener("input", function () {
+      const term = this.value.toLowerCase();
+      document.querySelectorAll(".faq-item").forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(term) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
