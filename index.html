@@ -909,6 +909,42 @@
         font-size: 0.72rem;
       }
 
+      /* Fix orbit badges getting cut off on mobile */
+      .orbit-visual {
+        overflow: visible;
+      }
+      
+      .orbit-badge {
+        font-size: 0.58rem;
+        padding: 5px 8px;
+        gap: 4px;
+      }
+      
+      .orbit-badge-top-left {
+        left: 3%;
+        top: 5%;
+      }
+      
+      .orbit-badge-bottom-right {
+        right: 3%;
+        bottom: 8%;
+      }
+      
+      .orbit-badge-pill {
+        font-size: 0.52rem;
+        padding: 2px 5px;
+      }
+
+      .orbit-core-chip {
+        padding: 6px 10px;
+        gap: 6px;
+        font-size: 0.62rem;
+      }
+
+      .orbit-core-chip-label {
+        font-size: 0.56rem;
+      }
+
       .nav-links {
         display: none;
       }
@@ -1109,7 +1145,7 @@
             <p class="card-body">
               Every project starts with story: who you are, what you stand for,
               and the world your music lives in. Focused, authentic, and
-              unmistakably you — not a copy of someone else’s algorithm.
+              unmistakably you — not a copy of someone else's algorithm.
             </p>
             <div class="tag-row">
               <span class="tag">Artist narrative</span>
@@ -1125,7 +1161,7 @@
             </div>
             <p class="card-body">
               From TikTok clips to email sequences, every release ships with
-              a campaign map — so you’re not just dropping songs, you’re
+              a campaign map — so you're not just dropping songs, you're
               guiding fans through a journey that actually converts.
             </p>
             <div class="tag-row">
@@ -1436,7 +1472,7 @@
               <div class="card-badge">Builders</div>
             </div>
             <p class="card-body">
-              Plug your catalog into NMG’s ecosystem. We help with titling, cover
+              Plug your catalog into NMG's ecosystem. We help with titling, cover
               art prompts, metadata, and marketing flows so your beats are more
               searchable, syncable, and story-driven.
             </p>
@@ -1471,7 +1507,7 @@
             <p class="newsletter-copy">
               1–2 emails a month with:
               <span>open collaboration calls, AI tools we actually use, beat & sync briefs, and
-              behind-the-scenes breakdowns</span> of how we’re building this label.
+              behind-the-scenes breakdowns</span> of how we're building this label.
             </p>
 
             <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Connect this to your email provider.');">
@@ -1513,7 +1549,7 @@
             </div>
 
             <p class="contact-note">
-              <span>Important:</span> include who you are, what you’re building, and your links (Spotify, BeatStars, Suno, etc.).
+              <span>Important:</span> include who you are, what you're building, and your links (Spotify, BeatStars, Suno, etc.).
             </p>
           </div>
         </div>
@@ -1555,5 +1591,3 @@
   </script>
 </body>
 </html>
-
-
