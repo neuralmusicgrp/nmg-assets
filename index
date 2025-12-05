@@ -1314,9 +1314,7 @@
             <!-- UPDATED: button link path to sync.html -->
             <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html"
                class="btn-primary"
-               style="text-decoration:none; padding-inline:18px; font-size:0.8rem;"
-               target="_blank"
-               rel="noopener noreferrer">
+               style="text-decoration:none; padding-inline:18px; font-size:0.8rem;">
               View Publishing + Sync Page
             </a>
           </article>
@@ -1632,9 +1630,7 @@
         <a href="#services">Label System</a>
         <a href="#ai-lab">AI Lab</a>
         <!-- UPDATED: footer link path to sync.html -->
-        <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html">
           Publishing + Sync
         </a>
         <a href="#contact">Contact</a>
@@ -1662,5 +1658,6 @@
   </script>
 </body>
 </html>
+
 
 
