@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NMG Publishing + Sync Division | Neural Music Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NMG Publishing + Sync is the licensing, publishing, and custom music division of Neural Music Group, connecting future-forward sound with film, TV, brands, games, and creators." />
+  <!-- Optional: match main NMG site fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #030312;
+      --bg-soft: #0b0b1f;
+      --bg-card: #111127;
+      --accent: #8b5cf6;
+      --accent-soft: rgba(139, 92, 246, 0.16);
+      --accent-strong: #c4a1ff;
+      --text-main: #f5f3ff;
+      --text-soft: #b2b0d9;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --danger: #f97373;
+      --success: #4ade80;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+      --transition-fast: 0.18s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #191834 0, #020212 55%, #010109 100%);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 22px 18px 72px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fdf2ff 0, #8b5cf6 32%, #020617 76%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 18px 40px rgba(0, 0, 0, 0.75);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* If you want to use your GitHub logo, replace the inner span with:
+       <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" alt="Neural Music Group logo" class="brand-img" />
+    */
+    .brand-logo span {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 1rem;
+    }
+
+    .brand-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-text-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .brand-text-sub {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.82rem;
+      padding: 6px 11px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-soft);
+      border: 1px solid transparent;
+      background: transparent;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    nav a:hover {
+      background: rgba(17, 24, 39, 0.9);
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    nav a.nav-cta {
+      border-color: rgba(139, 92, 246, 0.6);
+      background: radial-gradient(circle at top left, rgba(244, 244, 255, 0.1), rgba(139, 92, 246, 0.12));
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    nav a.nav-cta:hover {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(56, 189, 248, 0.12));
+      border-color: var(--accent);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .hero {
+      border-radius: var(--radius-xl);
+      padding: 26px 22px 26px;
+      background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.12) 0, transparent 52%),
+        radial-gradient(circle at 15% 20%, rgba(244, 244, 255, 0.11) 0, transparent 60%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(3, 7, 18, 0.96));
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--success);
+      box-shadow: 0 0 12px rgba(74, 222, 128, 0.75);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.95rem, 3vw, 2.4rem);
+      letter-spacing: 0.03em;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #e5e7ff, #c4a1ff, #6ee7ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      max-width: 34rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .tag-accent {
+      border-color: rgba(139, 92, 246, 0.7);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 17px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #8b5cf6, #6366f1);
+      border-color: rgba(226, 232, 255, 0.22);
+      color: #fdfcff;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #a855f7, #0ea5e9);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.65);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(148, 163, 184, 1);
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+    }
+
+    .btn span.label-sub {
+      font-size: 0.72rem;
+      opacity: 0.8;
+    }
+
+    .hero-footnote {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .hero-footnote strong {
+      color: var(--accent-strong);
+    }
+
+    .hero-panel {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 12% 0%, rgba(248, 250, 252, 0.14) 0, transparent 48%), #020617;
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      position: relative;
+      overflow: hidden;
+      min-height: 214px;
+    }
+
+    .hero-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .hero-pill {
+      font-size: 0.7rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .hero-panel-title {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #e5e7ff;
+      margin: 0;
+    }
+
+    .hero-panel-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.15fr);
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .hero-kpi-list {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .hero-kpi-list strong {
+      display: block;
+      font-size: 0.86rem;
+      color: #e5e7ff;
+      margin-bottom: 1px;
+    }
+
+    .hero-kpi-list span.kpi-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.62rem;
+      opacity: 0.7;
+    }
+
+    .hero-meter-card {
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.92));
+      padding: 10px 11px 9px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .meter-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+
+    .meter-label-row span {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    .meter-label-row strong {
+      font-size: 0.8rem;
+      color: var(--accent-strong);
+    }
+
+    .meter-track {
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .meter-fill {
+      height: 100%;
+      width: 78%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #22c55e, #a3e635, #facc15);
+      box-shadow: 0 0 16px rgba(132, 204, 22, 0.7);
+    }
+
+    .meter-caption {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      margin-top: 5px;
+    }
+
+    .section {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.98));
+      padding: 20px 18px 20px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .section-heading-sub {
+      color: var(--text-soft);
+      font-size: 0.86rem;
+      max-width: 430px;
+    }
+
+    .badge-subtle {
+      font-size: 0.72rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 14px 14px 13px;
+      font-size: 0.86rem;
+      color: var(--text-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      color: #e5e7ff;
+      font-weight: 600;
+    }
+
+    .card h3 span {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-strong);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .card ul {
+      margin: 8px 0 0;
+      padding-left: 17px;
+      list-style-type: disc;
+    }
+
+    .card li {
+      margin-bottom: 3px;
+    }
+
+    .card-pill {
+      position: absolute;
+      top: 10px;
+      right: 11px;
+      font-size: 0.68rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .card-ghost {
+      background: transparent;
+      border-style: dashed;
+      border-color: rgba(148, 163, 184, 0.45);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 0.72rem;
+    }
+
+    .pill-row span {
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .pill-row span.filled {
+      border-color: rgba(139, 92, 246, 0.8);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 0.78rem;
+    }
+
+    .step {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 9px 9px 8px;
+      position: relative;
+    }
+
+    .step-index {
+      font-size: 0.7rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 3px;
+    }
+
+    .step-title {
+      font-size: 0.86rem;
+      color: #e5e7ff;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .step:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.2), transparent 52%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast);
+    }
+
+    .step:hover:after {
+      opacity: 1;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      max-width: 460px;
+    }
+
+    .contact-note strong {
+      color: var(--accent-strong);
+    }
+
+    .contact-meta {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 5px;
+    }
+
+    .contact-meta span {
+      opacity: 0.9;
+    }
+
+    .contact-meta code {
+      font-family: "Space Grotesk", monospace;
+      font-size: 0.78rem;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 2px 5px;
+      border-radius: 7px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .contact-card {
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at 10% 0%, rgba(250, 250, 255, 0.16) 0, transparent 54%), rgba(15, 23, 42, 0.95);
+      padding: 12px 12px 11px;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-strong);
+      opacity: 0.9;
+    }
+
+    .contact-field {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 7px;
+      border-radius: 9px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 6px 7px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .contact-field span.label {
+      color: var(--text-soft);
+      font-size: 0.76rem;
+    }
+
+    .contact-field span.value {
+      font-family: "Space Grotesk", monospace;
+      font-size: 0.78rem;
+      color: #e5e7ff;
+      word-break: break-all;
+    }
+
+    .contact-foot {
+      font-size: 0.74rem;
+      color: var(--text-soft);
+      margin-top: 3px;
+    }
+
+    footer {
+      margin-top: auto;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 20px;
+      font-size: 0.75rem;
+      color: rgba(148, 163, 184, 0.8);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.97));
+    }
+
+    footer .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer a {
+      color: rgba(148, 163, 184, 0.95);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent-strong);
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-panel {
+        order: -1;
+      }
+
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .process-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 20px 16px 18px;
+      }
+
+      .section {
+        padding: 18px 14px 16px;
+      }
+
+      .process-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <span>N</span>
+          <!-- Or use your GitHub logo:
+          <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" alt="Neural Music Group logo" class="brand-img" />
+          -->
+        </div>
+        <div>
+          <div class="brand-text-title">Neural Music Group</div>
+          <div class="brand-text-sub">Publishing + Sync Division</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#creators">For Creators</a>
+        <a href="#supervisors">For Supervisors</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="nav-cta">Submit for Sync</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div>
+          <div class="hero-kicker">
+            <span class="pill-dot"></span>
+            NMG Publishing + Sync
+          </div>
+          <h1>
+            Future-forward <span>catalog & custom music</span> for stories that need to hit deeper.
+          </h1>
+          <p class="hero-sub">
+            NMG Publishing + Sync connects soulful, modern records and AI-enhanced compositions
+            with film, TV, ads, games, podcasts, UGC, and immersive experiences — with
+            clean paperwork and fast turnaround.
+          </p>
+          <div class="hero-tags">
+            <span class="tag-accent">Sync Licensing</span>
+            <span class="tag">Publishing Administration</span>
+            <span class="tag">Custom Score & Cues</span>
+            <span class="tag">AI + Human Collaborations</span>
+            <span class="tag">Beat & Topline Clearance</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#creators" class="btn btn-primary">
+              <span>I'm a Creator / Artist</span>
+            </a>
+            <a href="#supervisors" class="btn btn-outline">
+              <span>I'm a Music Supervisor / Brand</span>
+            </a>
+          </div>
+          <div class="hero-footnote">
+            One catalog, multiple lanes: <strong>master + publishing clearance</strong>, split sheets in place,
+            and usage-ready stems where available.
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="NMG sync snapshot">
+          <div class="hero-panel-header">
+            <div class="hero-pill">
+              <span class="pill-dot"></span>
+              Sync-Ready Pipeline
+            </div>
+            <p class="hero-panel-title">Curated catalog built for placements</p>
+          </div>
+          <div class="hero-panel-body">
+            <div class="hero-kpi-list">
+              <div>
+                <span class="kpi-label">Core moods</span>
+                <strong>Dark R&amp;B • Soulful Holiday • Cosmic Ambient</strong>
+                <span>Plus guided meditations &amp; sound-healing cues.</span>
+              </div>
+              <div>
+                <span class="kpi-label">Usage lanes</span>
+                <strong>Film/TV • Trailers • Spots • Social • Games • Podcasts</strong>
+              </div>
+            </div>
+            <div class="hero-meter-card">
+              <div class="meter-label-row">
+                <span>Catalog sync-readiness</span>
+                <strong>78% cleared</strong>
+              </div>
+              <div class="meter-track">
+                <div class="meter-fill"></div>
+              </div>
+              <div class="meter-caption">
+                Active work-in-progress to reach <strong>100% clearance</strong> for priority titles (splits, PRO, metadata dialed in).
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="section" id="overview">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Division Overview</div>
+            <div class="section-heading-sub">
+              The NMG Publishing + Sync Division sits at the intersection of
+              <strong>independent soul, trap & R&amp;B, guided meditations, sound-healing</strong>,
+              and AI-assisted composition — built to clear quickly and carry emotional weight on screen.
+            </div>
+          </div>
+          <div class="badge-subtle">Master &amp; Publishing Under One Roof</div>
+        </div>
+
+        <div class="grid-two">
+          <article class="card">
+            <h3>
+              <span>For Artists &amp; Producers</span>
+              Publishing &amp; admin that respects the creator.
+            </h3>
+            <p>
+              We help independent producers, writers, and vocalists lock in
+              <strong>splits, PRO registrations, and metadata</strong> so every placement
+              pays out correctly — and the music is easy to license.
+            </p>
+            <ul>
+              <li>Split sheets &amp; ownership clarity for every song.</li>
+              <li>PRO registrations (ASCAP / BMI / SOCAN / PRS, etc.).</li>
+              <li>Catalog strategy for sync (alt mixes, instrumentals, stems).</li>
+              <li>Education for creatives on how sync really works.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span>For Supervisors &amp; Brands</span>
+              One-stop, human-run boutique with an AI edge.
+            </h3>
+            <p>
+              You get pre-cleared masters, responsive communication, and
+              a catalog that blends <strong>organic emotion</strong> with
+              <strong>experimental, future-leaning textures.</strong>
+            </p>
+            <ul>
+              <li>Fast quotes for one-offs, series, campaigns, and trailers.</li>
+              <li>Custom briefs for genre, BPM, key, vibe, and theme.</li>
+              <li>Usage-ready licenses: social, web-only, all media, global, etc.</li>
+              <li>Access to human + AI hybrid compositions where appropriate.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- FOR CREATORS -->
+      <section class="section" id="creators">
+        <div class="section-header">
+          <div>
+            <div class="section-title">For Creators</div>
+            <div class="section-heading-sub">
+              You make the records. We protect, organize, and pitch them — with transparent splits and
+              simple systems you can actually understand.
+            </div>
+          </div>
+          <div class="badge-subtle">Artists • Producers • Composers • Writers</div>
+        </div>
+
+        <div class="grid-two">
+          <article class="card">
+            <div class="card-pill">Admin &amp; Paperwork</div>
+            <h3>Publishing Administration &amp; Split Support</h3>
+            <p>
+              We use a simple, standardized split-sheet workflow so every collaborator is locked in from
+              day one. No confusion, no mystery points, no surprises when a placement lands.
+            </p>
+            <ul>
+              <li>Onboarding of songs with writer shares &amp; PRO info.</li>
+              <li>Split sheet templates and digital signing options.</li>
+              <li>Basic writer &amp; publisher registrations where applicable.</li>
+              <li>Guidance on samples, beats, and third-party clearances.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-pill">Placement-Ready</div>
+            <h3>Sync-Focused Catalog Development</h3>
+            <p>
+              We help you prep songs so they’re attractive to supervisors:
+              clean versions, hooks up front, easy cut-points, and strong mood tagging
+              across your catalog.
+            </p>
+            <ul>
+              <li>Suggestions on intros, endings, and edit-friendly sections.</li>
+              <li>Optional alt mixes: instrumental, TV mix, performance versions.</li>
+              <li>Tagging by mood, energy, usage (promo, trailer, underscore, etc.).</li>
+              <li>Priority consideration for NMG sync samplers and pitches.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-two" style="margin-top: 12px;">
+          <article class="card card-ghost">
+            <h3>Creator-Friendly Deal Structures</h3>
+            <p>
+              We’re building a modern publishing ecosystem that leans toward
+              <strong>flexible, non-predatory terms</strong> — with space for admin, co-pub,
+              and single-song sync deals depending on what you need.
+            </p>
+            <div class="pill-row">
+              <span class="filled">Admin-style deals</span>
+              <span>Single-song sync</span>
+              <span>Catalog samplers</span>
+              <span>Custom briefs</span>
+            </div>
+          </article>
+
+          <article class="card card-ghost">
+            <h3>Education &amp; Clarity</h3>
+            <p>
+              As NMG grows, creators get access to plain-language breakdowns of:
+              publishing splits, sync fees, backend royalties, and how each placement
+              flows back to you.
+            </p>
+            <p style="margin-top: 6px;">
+              Our goal is simple: <strong>no black boxes</strong>. You should understand how your own catalog works.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FOR SUPERVISORS / BRANDS -->
+      <section class="section" id="supervisors">
+        <div class="section-header">
+          <div>
+            <div class="section-title">For Music Supervisors &amp; Brands</div>
+            <div class="section-heading-sub">
+              Boutique service, fast answers, and a catalog that lives where modern soul, dark R&amp;B,
+              meditative soundscapes, and experimental AI-driven textures meet.
+            </div>
+          </div>
+          <div class="badge-subtle">Film • TV • Ads • Games • Podcasts • Social</div>
+        </div>
+
+        <div class="grid-two">
+          <article class="card">
+            <div class="card-pill">Licensing</div>
+            <h3>Fast, Clear Sync Licensing</h3>
+            <p>
+              You get one point of contact for master &amp; publishing where possible,
+              realistic budgets, and turnarounds designed for real-world production timelines.
+            </p>
+            <ul>
+              <li>Quick quote range based on usage, territory, and term.</li>
+              <li>Master + publishing clearance wherever NMG controls both sides.</li>
+              <li>Flexible licensing for web-only, social, limited term, or all-media.</li>
+              <li>Paperwork templates ready to adapt to your standard forms.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-pill">Custom</div>
+            <h3>Custom Compositions &amp; Sonic Branding</h3>
+            <p>
+              Need something bespoke? We can build original cues and themes that blend
+              human performance, AI sound design, and carefully curated samples.
+            </p>
+            <ul>
+              <li>Brief-driven custom tracks (tempo, reference, palette, story).</li>
+              <li>Logo stings, podcast themes, underscore beds, and atmospheres.</li>
+              <li>Optional alternate AI-assisted arrangements under clear terms.</li>
+              <li>Delivery with stems where required for your mix &amp; dub stages.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-two" style="margin-top: 12px;">
+          <article class="card card-ghost">
+            <h3>Core Sound Pillars</h3>
+            <p>
+              Current and near-term catalog focuses include:
+            </p>
+            <div class="pill-row">
+              <span class="filled">Dark &amp; Cinematic R&amp;B</span>
+              <span class="filled">Soulful Holiday &amp; Seasonal</span>
+              <span class="filled">Guided Meditation &amp; Sound-Healing</span>
+              <span>Trap &amp; Modern Hip-Hop</span>
+              <span>Ambient &amp; Cosmic Score</span>
+            </div>
+          </article>
+
+          <article class="card card-ghost">
+            <h3>How We Deliver</h3>
+            <p>
+              We’re happy to pitch against briefs or provide light-touch, pre-curated links for fast searches:
+            </p>
+            <ul>
+              <li>Private streaming links (Spotify/Apple/YouTube) by theme.</li>
+              <li>Download packs with WAV/AIFF + MP3 + metadata sheets.</li>
+              <li>Simple one-sheet PDFs for key projects and artists.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section" id="process">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Sync Workflow</div>
+            <div class="section-heading-sub">
+              Whether you’re submitting music or licensing it, the path is straightforward. No mystery, no runaround.
+            </div>
+          </div>
+          <div class="badge-subtle">Transparent + Traceable</div>
+        </div>
+
+        <div class="process-list">
+          <article class="step">
+            <div class="step-index">Step 01</div>
+            <div class="step-title">Submit &amp; Tag</div>
+            <p>
+              Creators share 2–5 of their strongest tracks with basic metadata,
+              splits, and streaming/download links via our submission form.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-index">Step 02</div>
+            <div class="step-title">Review &amp; Fit</div>
+            <p>
+              We review for quality, sonic fit, and clearance complexity, then decide
+              whether to onboard into the NMG Publishing + Sync catalog.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-index">Step 03</div>
+            <div class="step-title">Onboard &amp; Clear</div>
+            <p>
+              If accepted, we lock in splits, confirm PROs, request alt mixes where needed,
+              and add the songs to our internal sync universe.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-index">Step 04</div>
+            <div class="step-title">Pitch, Place, Pay</div>
+            <p>
+              We pitch against briefs, respond to supervisor requests, close licenses,
+              and ensure creator payouts are tracked and reported.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT / SUBMISSION -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Contact &amp; Submissions</div>
+            <div class="section-heading-sub">
+              This page is the front door. Use email or the submission link below depending on
+              whether you’re a creator or a supervisor/brand.
+            </div>
+          </div>
+          <div class="badge-subtle">Work With NMG</div>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <p class="contact-note">
+              <strong>Creators &amp; writers:</strong> Please send only your strongest 2–5 tracks that you fully or majority control.
+              Include streaming links (no large attachments) and clear notes on <em>splits, samples, and PRO info</em>.
+            </p>
+            <p class="contact-note">
+              <strong>Music supervisors, producers, brands:</strong> Email us a brief (usage, budget, references, timeline),
+              and we’ll reply with options or a calendar slot to talk.
+            </p>
+            <div class="hero-actions" style="margin-top: 6px;">
+              <!-- Replace mailto with your real sync email -->
+              <a href="mailto:sync@neuralmusicgrp.com?subject=NMG%20Publishing%20%2B%20Sync%20Inquiry" class="btn btn-primary">
+                Email NMG Publishing + Sync
+              </a>
+              <!-- Replace # with your real form link (e.g., Google Form / Typeform / Notion) -->
+              <a href="https://example.com/nmg-sync-submissions" class="btn btn-outline" target="_blank" rel="noopener">
+                Open Sync Submission Form
+              </a>
+            </div>
+            <div class="contact-meta">
+              <span>Suggested subject lines:</span>
+              <span><code>[CREATOR] Sync Submission – Artist Name – Genre / Mood</code></span>
+              <span><code>[SUPERVISOR] Brief – Project Title – Usage / Dates</code></span>
+            </div>
+          </div>
+
+          <aside class="contact-card" aria-label="Submission quick reference">
+            <div class="contact-label">Submission Snapshot</div>
+
+            <div class="contact-field">
+              <span class="label">Preferred formats</span>
+              <span class="value">Streaming links + one download link (WAV/AIFF zip)</span>
+            </div>
+
+            <div class="contact-field">
+              <span class="label">Minimum metadata</span>
+              <span class="value">Title • Artist • Writers &amp; % • PRO • Contact</span>
+            </div>
+
+            <div class="contact-field">
+              <span class="label">Helpful extras</span>
+              <span class="value">BPM • Key • Mood tags • “Sounds like” refs</span>
+            </div>
+
+            <p class="contact-foot">
+              We review everything, but not all submissions will be a fit. If selected for the catalog,
+              we’ll follow up with next steps and deal terms before any pitching occurs.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Neural Music Group — NMG Publishing + Sync Division.</span>
+      <span>Part of the OMNIA creative ecosystem.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
