@@ -38,12 +38,15 @@
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
     }
 
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      /* small base padding to avoid hard edge at very bottom */
+      padding-bottom: env(safe-area-inset-bottom, 0);
     }
 
     .page {
@@ -76,16 +79,6 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-    }
-
-    /* If you want to use your GitHub logo, replace the inner span with:
-       <img src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" alt="Neural Music Group logo" class="brand-img" />
-    */
-    .brand-logo span {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      font-size: 1rem;
     }
 
     .brand-img {
@@ -125,7 +118,11 @@
       color: var(--text-soft);
       border: 1px solid transparent;
       background: transparent;
-      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
     }
 
     nav a:hover {
@@ -253,7 +250,12 @@
       font-weight: 500;
       text-decoration: none;
       cursor: pointer;
-      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
       white-space: nowrap;
     }
 
@@ -290,6 +292,7 @@
     .hero-footnote {
       font-size: 0.75rem;
       color: var(--text-soft);
+      line-height: 1.6;
     }
 
     .hero-footnote strong {
@@ -409,6 +412,7 @@
       font-size: 0.7rem;
       color: var(--text-soft);
       margin-top: 5px;
+      line-height: 1.6;
     }
 
     .section {
@@ -440,6 +444,7 @@
       color: var(--text-soft);
       font-size: 0.86rem;
       max-width: 430px;
+      line-height: 1.7;
     }
 
     .badge-subtle {
@@ -486,6 +491,10 @@
       margin-bottom: 3px;
     }
 
+    .card p {
+      line-height: 1.65;
+    }
+
     .card ul {
       margin: 8px 0 0;
       padding-left: 17px;
@@ -494,6 +503,7 @@
 
     .card li {
       margin-bottom: 3px;
+      line-height: 1.6;
     }
 
     .card-pill {
@@ -571,6 +581,7 @@
     .step p {
       margin: 0;
       color: var(--text-soft);
+      line-height: 1.6;
     }
 
     .step:after {
@@ -599,6 +610,7 @@
       color: var(--text-soft);
       margin-bottom: 10px;
       max-width: 460px;
+      line-height: 1.7;
     }
 
     .contact-note strong {
@@ -673,6 +685,7 @@
       font-size: 0.74rem;
       color: var(--text-soft);
       margin-top: 3px;
+      line-height: 1.6;
     }
 
     footer {
@@ -703,6 +716,7 @@
       color: var(--accent-strong);
     }
 
+    /* Tablet-ish */
     @media (max-width: 880px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
@@ -725,10 +739,17 @@
       }
     }
 
+    /* Mobile */
     @media (max-width: 640px) {
+      .page {
+        /* extra bottom padding so last cards sit above Safari’s bar */
+        padding: 18px 14px 96px;
+      }
+
       header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
       }
 
       nav {
@@ -737,6 +758,15 @@
 
       .hero {
         padding: 20px 16px 18px;
+        gap: 18px;
+      }
+
+      .hero h1 {
+        font-size: 1.85rem;
+      }
+
+      main {
+        gap: 32px;
       }
 
       .section {
@@ -754,11 +784,11 @@
     <header>
       <div class="brand">
         <div class="brand-logo" aria-hidden="true">
-          <img 
-			src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png" 
-			alt="Neural Music Group logo"
-			class="brand-img"
-		 />          
+          <img
+            src="https://raw.githubusercontent.com/neuralmusicgrp/nmg-assets/main/logo.png"
+            alt="Neural Music Group logo"
+            class="brand-img"
+          />
         </div>
         <div>
           <div class="brand-text-title">Neural Music Group</div>
@@ -785,7 +815,7 @@
             NMG Publishing + Sync
           </div>
           <h1>
-            Future-forward <span>catalog & custom music</span> for stories that need to hit deeper.
+            Future-forward <span>catalog &amp; custom music</span> for stories that need to hit deeper.
           </h1>
           <p class="hero-sub">
             NMG Publishing + Sync connects soulful, modern records and AI-enhanced compositions
@@ -795,9 +825,9 @@
           <div class="hero-tags">
             <span class="tag-accent">Sync Licensing</span>
             <span class="tag">Publishing Administration</span>
-            <span class="tag">Custom Score & Cues</span>
+            <span class="tag">Custom Score &amp; Cues</span>
             <span class="tag">AI + Human Collaborations</span>
-            <span class="tag">Beat & Topline Clearance</span>
+            <span class="tag">Beat &amp; Topline Clearance</span>
           </div>
           <div class="hero-actions">
             <a href="#creators" class="btn btn-primary">
@@ -856,7 +886,7 @@
             <div class="section-title">Division Overview</div>
             <div class="section-heading-sub">
               The NMG Publishing + Sync Division sits at the intersection of
-              <strong>independent soul, trap & R&amp;B, guided meditations, sound-healing</strong>,
+              <strong>independent soul, trap &amp; R&amp;B, guided meditations, sound-healing</strong>,
               and AI-assisted composition — built to clear quickly and carry emotional weight on screen.
             </div>
           </div>
