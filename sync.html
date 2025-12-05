@@ -740,6 +740,14 @@
       .process-list {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      /* FIX: Move card pills above heading on mobile to prevent overlap */
+      .card-pill {
+        position: static;
+        display: block;
+        margin-bottom: 8px;
+        width: fit-content;
+      }
     }
   </style>
 </head>
@@ -929,7 +937,7 @@
             <div class="card-pill">Placement-Ready</div>
             <h3>Sync-Focused Catalog Development</h3>
             <p>
-              We help you prep songs so they’re attractive to supervisors:
+              We help you prep songs so they're attractive to supervisors:
               clean versions, hooks up front, easy cut-points, and strong mood tagging
               across your catalog.
             </p>
@@ -946,7 +954,7 @@
           <article class="card card-ghost">
             <h3>Creator-Friendly Deal Structures</h3>
             <p>
-              We’re building a modern publishing ecosystem that leans toward
+              We're building a modern publishing ecosystem that leans toward
               <strong>flexible, non-predatory terms</strong> — with space for admin, co-pub,
               and single-song sync deals depending on what you need.
             </p>
@@ -1035,7 +1043,7 @@
           <article class="card card-ghost">
             <h3>How We Deliver</h3>
             <p>
-              We’re happy to pitch against briefs or provide light-touch, pre-curated links for fast searches:
+              We're happy to pitch against briefs or provide light-touch, pre-curated links for fast searches:
             </p>
             <ul>
               <li>Private streaming links (Spotify/Apple/YouTube) by theme.</li>
@@ -1052,7 +1060,7 @@
           <div>
             <div class="section-title">Sync Workflow</div>
             <div class="section-heading-sub">
-              Whether you’re submitting music or licensing it, the path is straightforward. No mystery, no runaround.
+              Whether you're submitting music or licensing it, the path is straightforward. No mystery, no runaround.
             </div>
           </div>
           <div class="badge-subtle">Transparent + Traceable</div>
@@ -1101,7 +1109,7 @@
             <div class="section-title">Contact &amp; Submissions</div>
             <div class="section-heading-sub">
               This page is the front door. Use email or the submission link below depending on
-              whether you’re a creator or a supervisor/brand.
+              whether you're a creator or a supervisor/brand.
             </div>
           </div>
           <div class="badge-subtle">Work With NMG</div>
@@ -1115,7 +1123,7 @@
             </p>
             <p class="contact-note">
               <strong>Music supervisors, producers, brands:</strong> Email us a brief (usage, budget, references, timeline),
-              and we’ll reply with options or a calendar slot to talk.
+              and we'll reply with options or a calendar slot to talk.
             </p>
             <div class="hero-actions" style="margin-top: 6px;">
               <!-- UPDATED: email goes to neuralmusicgrp@gmail.com -->
@@ -1149,12 +1157,12 @@
 
             <div class="contact-field">
               <span class="label">Helpful extras</span>
-              <span class="value">BPM • Key • Mood tags • “Sounds like” refs</span>
+              <span class="value">BPM • Key • Mood tags • "Sounds like" refs</span>
             </div>
 
             <p class="contact-foot">
               We review everything, but not all submissions will be a fit. If selected for the catalog,
-              we’ll follow up with next steps and deal terms before any pitching occurs.
+              we'll follow up with next steps and deal terms before any pitching occurs.
             </p>
           </aside>
         </div>
