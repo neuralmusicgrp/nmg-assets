@@ -38,15 +38,15 @@
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-      scroll-behavior: smooth;
     }
 
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      /* small base padding to avoid hard edge at very bottom */
-      padding-bottom: env(safe-area-inset-bottom, 0);
+      /* give breathing room above iOS Safari bottom bar */
+      padding-bottom: 24px;
+      padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
     }
 
     .page {
@@ -118,11 +118,7 @@
       color: var(--text-soft);
       border: 1px solid transparent;
       background: transparent;
-      transition:
-        background var(--transition-fast),
-        color var(--transition-fast),
-        border-color var(--transition-fast),
-        transform var(--transition-fast);
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
     }
 
     nav a:hover {
@@ -250,12 +246,7 @@
       font-weight: 500;
       text-decoration: none;
       cursor: pointer;
-      transition:
-        background var(--transition-fast),
-        color var(--transition-fast),
-        border-color var(--transition-fast),
-        box-shadow var(--transition-fast),
-        transform var(--transition-fast);
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
       white-space: nowrap;
     }
 
@@ -292,7 +283,6 @@
     .hero-footnote {
       font-size: 0.75rem;
       color: var(--text-soft);
-      line-height: 1.6;
     }
 
     .hero-footnote strong {
@@ -412,7 +402,6 @@
       font-size: 0.7rem;
       color: var(--text-soft);
       margin-top: 5px;
-      line-height: 1.6;
     }
 
     .section {
@@ -444,7 +433,6 @@
       color: var(--text-soft);
       font-size: 0.86rem;
       max-width: 430px;
-      line-height: 1.7;
     }
 
     .badge-subtle {
@@ -468,7 +456,8 @@
       border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.35);
       background: rgba(15, 23, 42, 0.9);
-      padding: 14px 14px 13px;
+      /* extra bottom padding so text + pills clear Safari bar visually */
+      padding: 14px 14px 24px;
       font-size: 0.86rem;
       color: var(--text-soft);
       position: relative;
@@ -491,10 +480,6 @@
       margin-bottom: 3px;
     }
 
-    .card p {
-      line-height: 1.65;
-    }
-
     .card ul {
       margin: 8px 0 0;
       padding-left: 17px;
@@ -503,7 +488,6 @@
 
     .card li {
       margin-bottom: 3px;
-      line-height: 1.6;
     }
 
     .card-pill {
@@ -558,7 +542,7 @@
       border-radius: 14px;
       border: 1px solid rgba(148, 163, 184, 0.4);
       background: rgba(15, 23, 42, 0.9);
-      padding: 9px 9px 8px;
+      padding: 9px 9px 10px;
       position: relative;
     }
 
@@ -581,7 +565,6 @@
     .step p {
       margin: 0;
       color: var(--text-soft);
-      line-height: 1.6;
     }
 
     .step:after {
@@ -610,7 +593,6 @@
       color: var(--text-soft);
       margin-bottom: 10px;
       max-width: 460px;
-      line-height: 1.7;
     }
 
     .contact-note strong {
@@ -643,7 +625,7 @@
       border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.5);
       background: radial-gradient(circle at 10% 0%, rgba(250, 250, 255, 0.16) 0, transparent 54%), rgba(15, 23, 42, 0.95);
-      padding: 12px 12px 11px;
+      padding: 12px 12px 13px;
       font-size: 0.8rem;
       display: flex;
       flex-direction: column;
@@ -685,13 +667,12 @@
       font-size: 0.74rem;
       color: var(--text-soft);
       margin-top: 3px;
-      line-height: 1.6;
     }
 
     footer {
       margin-top: auto;
       border-top: 1px solid rgba(15, 23, 42, 0.9);
-      padding: 16px 18px 20px;
+      padding: 16px 18px calc(20px + env(safe-area-inset-bottom, 0px));
       font-size: 0.75rem;
       color: rgba(148, 163, 184, 0.8);
       background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.97));
@@ -716,7 +697,6 @@
       color: var(--accent-strong);
     }
 
-    /* Tablet-ish */
     @media (max-width: 880px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
@@ -739,17 +719,10 @@
       }
     }
 
-    /* Mobile */
     @media (max-width: 640px) {
-      .page {
-        /* extra bottom padding so last cards sit above Safari’s bar */
-        padding: 18px 14px 96px;
-      }
-
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
       }
 
       nav {
@@ -758,19 +731,10 @@
 
       .hero {
         padding: 20px 16px 18px;
-        gap: 18px;
-      }
-
-      .hero h1 {
-        font-size: 1.85rem;
-      }
-
-      main {
-        gap: 32px;
       }
 
       .section {
-        padding: 18px 14px 16px;
+        padding: 18px 14px 18px;
       }
 
       .process-list {
@@ -815,7 +779,7 @@
             NMG Publishing + Sync
           </div>
           <h1>
-            Future-forward <span>catalog &amp; custom music</span> for stories that need to hit deeper.
+            Future-forward <span>catalog & custom music</span> for stories that need to hit deeper.
           </h1>
           <p class="hero-sub">
             NMG Publishing + Sync connects soulful, modern records and AI-enhanced compositions
@@ -825,9 +789,9 @@
           <div class="hero-tags">
             <span class="tag-accent">Sync Licensing</span>
             <span class="tag">Publishing Administration</span>
-            <span class="tag">Custom Score &amp; Cues</span>
+            <span class="tag">Custom Score & Cues</span>
             <span class="tag">AI + Human Collaborations</span>
-            <span class="tag">Beat &amp; Topline Clearance</span>
+            <span class="tag">Beat & Topline Clearance</span>
           </div>
           <div class="hero-actions">
             <a href="#creators" class="btn btn-primary">
