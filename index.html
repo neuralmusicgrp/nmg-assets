@@ -1248,7 +1248,7 @@
           <article class="card">
             <div class="card-header">
               <h3 class="card-title">Sync & Licensing</h3>
-            <div class="card-badge">Placement</div>
+              <div class="card-badge">Placement</div>
             </div>
             <p class="card-body">
               We design songs with placement in mind: clear themes, clean
@@ -1424,18 +1424,18 @@
             <div class="artist-chip">
               <span class="artist-chip-dot"></span>
               <span>
-			    <a href="https://neuralmusicgroup.hearnow.com/love-soul-home-for-the-holidays" 
-				   target="_blank" 
-				   rel="noopener noreferrer" 
-				   style="text-decoration:none; color:inherit;">
-			      Love &amp; Soul
-			    </a>
-			  </span>
+                <a href="https://neuralmusicgroup.hearnow.com/love-soul-home-for-the-holidays" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="text-decoration:none; color:inherit;">
+                  Love &amp; Soul
+                </a>
+              </span>
             </div>
             <div>
               <div class="artist-name"> 
-			    Home for the Holidays
-			  </div>
+                Home for the Holidays
+              </div>
               <div class="artist-meta">
                 R&B / soul holiday universe featuring Lumi Rae, The Fourth Harmonic,
                 and a rotating cast of AI-assisted vocalists.
@@ -1452,13 +1452,13 @@
             <div class="artist-chip">
               <span class="artist-chip-dot" style="background:#22c55e;"></span>
               <span>
-				<a href="https://www.beatstars.com/acedawgbeatz" 
-				   target="_blank" 
+                <a href="https://www.beatstars.com/acedawgbeatz" 
+                   target="_blank" 
                    rel="noopener noreferrer" 
                    style="text-decoration:none; color:inherit;">
-			     AcedawgBeatz
-			   </a>
-			  </span>
+                  AcedawgBeatz
+                </a>
+              </span>
             </div>
             <div>
               <div class="artist-name">Producer • Beat Architect</div>
@@ -1573,13 +1573,24 @@
               behind-the-scenes breakdowns</span> of how we're building this label.
             </p>
 
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Connect this to your email provider.');">
+            <!-- ConvertKit-connected form -->
+            <form
+              class="newsletter-form"
+              action="https://api.convertkit.com/v3/forms/8846636/subscribe"
+              method="post"
+            >
               <input
                 type="email"
+                name="email"
                 required
                 class="newsletter-input"
                 placeholder="you@example.com"
                 aria-label="Email address"
+              />
+              <input
+                type="hidden"
+                name="api_key"
+                value="9GaiTblmIA4Y4Zd8V1rICA"
               />
               <button class="newsletter-btn" type="submit">
                 Join Neural Circle
@@ -1658,6 +1669,3 @@
   </script>
 </body>
 </html>
-
-
-
