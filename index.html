@@ -1018,12 +1018,10 @@
           <a href="#vision">Vision</a>
           <a href="#services">Label</a>
           <a href="#ai-lab">AI Lab</a>
-          <!-- UPDATED: Publishing + Sync subpage path to sync.html -->
           <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html">
             Publishing + Sync
           </a>
-          <!-- NMG FAQ GPT in main nav (opens in new tab) -->
-          <a href="https://chatgpt.com/g/g-692d52f75ad0819195865ac77d468dd8-n-m-g" rel="noopener noreferrer">NMG FAQ GPT</a>
+          <a href="https://chatgpt.com/g/g-692d52f75ad0819195865ac77d468dd8-n-m-g" target="_blank" rel="noopener noreferrer">NMG FAQ GPT</a>
           <a href="#roster">Artists</a>
           <a href="#beats">Beats</a>
           <a href="faq.html">FAQ</a>
@@ -1311,7 +1309,6 @@
               <span class="tag">Trailers</span>
               <span class="tag">Spots &amp; social</span>
             </div>
-            <!-- UPDATED: button link path to sync.html -->
             <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html"
                class="btn-primary"
                style="text-decoration:none; padding-inline:18px; font-size:0.8rem;">
@@ -1573,32 +1570,18 @@
               behind-the-scenes breakdowns</span> of how we're building this label.
             </p>
 
-            <!-- ConvertKit-connected form with redirect -->
+            <!-- Simple redirect form - no email input on NMG site -->
             <form
               class="newsletter-form"
-              action="https://api.convertkit.com/v3/forms/8846636/subscribe?redirect_to=https%3A%2F%2Fneuralmusicgrp.github.io%2Fnmg-assets%2Fthanks.html"
-              method="post"
+              onsubmit="event.preventDefault(); window.location.href='https://neural-music-group.kit.com/961ea60eba';"
             >
-              <input
-                type="email"
-                name="email"
-                required
-                class="newsletter-input"
-                placeholder="you@example.com"
-                aria-label="Email address"
-              />
-              <input
-                type="hidden"
-                name="api_key"
-                value="9GaiTblmIA4Y4Zd8V1rICA"
-              />
               <button class="newsletter-btn" type="submit">
                 Join Neural Circle
               </button>
             </form>
 
             <p class="newsletter-meta">
-              No spam. Just experiments, opportunities, and real talk about the new music economy.
+              No spam. You'll be taken to our secure signup page to confirm your spot in the Neural Circle.
             </p>
           </div>
 
@@ -1640,7 +1623,6 @@
         <a href="#vision">Vision</a>
         <a href="#services">Label System</a>
         <a href="#ai-lab">AI Lab</a>
-        <!-- UPDATED: footer link path to sync.html -->
         <a href="https://neuralmusicgrp.github.io/nmg-assets/sync.html">
           Publishing + Sync
         </a>
