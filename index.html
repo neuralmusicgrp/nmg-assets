@@ -1027,10 +1027,10 @@
           <a href="faq.html">FAQ</a>
           <a href="#contact">Contact</a>
         </div>
-        <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <a class="nav-cta" href="partner.html" style="text-decoration:none;">
           <span>Partner with NMG</span>
           <span class="nav-cta-pill">Now Accepting Builders</span>
-        </button>
+        </a>
         <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
           <div class="nav-toggle-line"></div>
           <div class="nav-toggle-line"></div>
@@ -1636,4 +1636,18 @@
   <!-- FLOATING PARTNER BUTTON -->
   <a
     class="floating-partner-btn"
-    href="https://neuralmusicgrp.github.io/nmg-assets/partner.html"
+    href="partner.html"
+  >
+    <span>Apply As NMG Partner</span>
+  </a>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('open');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
